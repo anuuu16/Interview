@@ -1,3 +1,7 @@
+# JavaScript Interview Questions & Answers
+
+
+
 ### Table of Contents
 
 | No. | Questions |
@@ -5328,7 +5332,7 @@
          expertiseStr = 'junior developer';
        }
 
-       return ${str0}${userExp}${str1}${expertiseStr}${str2}${skillExp};
+       return `${str0}${userExp}${str1}${expertiseStr}${str2}${skillExp}`;
      }
 
      var output1 = myInfoTag`Mr/Ms. ${ user1 } is a/an ${ experience1 } in ${skill1}`;
@@ -7210,8 +7214,8 @@
         console.log(dt.toLocaleTimeString()); 
       }(new Date()); 
      ```
-
-    **[⬆ Back to Top](#table-of-contents)**
+     
+     **[⬆ Back to Top](#table-of-contents)**
 
 422. ### Is that possible to use expressions in switch cases?
      You might have seen expressions used in switch condition but it is also possible to use for switch cases by assigning true value for the switch condition. Let's see the weather condition based on temparature as an example,
@@ -7282,6 +7286,57 @@
      ```
      You can also use `console.groupCollapsed()` instead of `console.group()` if you want the groups to be collapsed by default.
          
+     **[⬆ Back to Top](#table-of-contents)**
+
+427. ### What is the difference between dense and sparse arrays?
+
+     An array contians items at each index starting from first(0) to last(array.length - 1) is called as Dense array. Whereas if at least one item is missing at any index, the array is called as sparse.
+
+     Let's see the below two kind of arrays,
+
+     ```js
+     const avengers = ['Ironman', 'Hulk', 'CaptainAmerica'];
+     console.log(avengers[0]); // 'Ironman'
+     console.log(avengers[1]); // 'Hulk'
+     console.log(avengers[2]); // 'CaptainAmerica'
+     console.log(avengers.length); // 3
+
+     const justiceLeague = ['Superman', 'Aquaman', ,'Batman'];
+     console.log(justiceLeague[0]); // 'Superman'
+     console.log(justiceLeague[1]); // 'Aquaman'
+     console.log(justiceLeague[2]); // undefined
+     console.log(justiceLeague[3]); // 'Batman'
+     console.log(justiceLeague.length); // 4
+     ```
+
+     **[⬆ Back to Top](#table-of-contents)**
+
+428. ### What is the difference between dense and sparse arrays?
+
+     There are 4 different ways to create sparse arrays in JavaScript
+
+     1. **Array literal:** Omit a value when using the array literal 
+          ```js
+          const justiceLeague = ['Superman', 'Aquaman', ,'Batman'];
+          console.log(justiceLeague); // ['Superman', 'Aquaman', empty ,'Batman']
+          ```
+     2. **Array() constructor:** Invoking Array(length) or new Array(length)
+          ```js
+          const array = Array(3);
+          console.log(array); // [empty, empty ,empty]
+          ```
+     3. **Delete operator:** Using delete array[index] operator on the array
+          ```js
+          const justiceLeague = ['Superman', 'Aquaman', 'Batman'];
+          delete justiceLeague[1];
+          console.log(justiceLeague); // ['Superman', empty, ,'Batman']
+          ```
+     4. **Increase length property:** Increasing length property of an array
+          ```js
+          const justiceLeague = ['Superman', 'Aquaman', 'Batman'];
+          justiceLeague.length = 5;
+          console.log(justiceLeague); // ['Superman', 'Aquaman', 'Batman', empty, empty]
+          ```
      **[⬆ Back to Top](#table-of-contents)**
 
 ### Coding Exercise
@@ -9102,3 +9157,12 @@ Whereas the second console.log logs 10 by capturing the count variable from oute
 
 **[⬆ Back to Top](#table-of-contents)**
 
+---
+
+## Disclaimer
+
+The questions provided in this repository are the summary of frequently asked questions across numerous companies. We cannot guarantee that these questions will actually be asked during your interview process, nor should you focus on memorizing all of them. The primary purpose is for you to get a sense of what some companies might ask — do not get discouraged if you don't know the answer to all of them ⁠— that is ok!
+
+Good luck with your interview 😊
+
+---
