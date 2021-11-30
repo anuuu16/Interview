@@ -1,0 +1,31 @@
+{
+  "bitwise": false,
+  "boss": true,
+  "browser": false,
+  "camelcase": true,
+  "curly": true,
+  "devel": true,
+  "eqeqeq": true,
+  "eqnull": true,
+  "esnext": true,
+  "expr": true,
+  "forin": true,
+  "immed": true,
+  "jquery": false,
+  "latedef": true,
+  "newcap": true,
+  "noarg": true,
+  "node": true,
+  "nonstandard": true,
+  "quotmark": "single",
+  "smarttabs": true,
+  "strict": false,
+  "trailing": true,
+  "undef": true,
+  "unused": true,
+  "worker": true,
+  "globals": {
+    "it": true,
+    "describe": true
+  }
+}
